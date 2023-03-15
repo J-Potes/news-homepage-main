@@ -1,0 +1,30 @@
+:root {
+    /* Primary Colors*/
+    --softOrange: hsl(35, 77%, 62%);
+    --softRed: hsl(5, 85%, 63%);
+
+    /* Neutral Colors*/
+    --offWhite: hsl(36, 100%, 99%);
+    --grayishBlue: hsl(233, 8%, 79%);
+    --darkGrayishBlue: hsl(236, 13%, 42%);
+    --veryDarkBlue: hsl(240, 100%, 5%);
+
+    /* Font */
+    --mainFont: 'Inter', sans-serif;
+}
+
+/* Globals */
+
+html {
+    font-size: 62.5%;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: var(--mainFont);
+}
+
