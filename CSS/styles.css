@@ -17,6 +17,9 @@
 
 html {
     font-size: 62.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 html, body {
@@ -26,5 +29,58 @@ html, body {
 
 body {
     font-family: var(--mainFont);
+    background-color: var(--offWhite);
+    width: 100%;
+    max-width: 120rem;
+    height: auto;
+    padding: 0 2rem;
 }
 
+/** Navbar **/
+
+.navbar {
+    width: 100%;
+    height: 4rem;
+}
+
+.navbar__logo {
+}
+
+.navbar__logo--icon {
+}
+
+.navbar__list {
+    float: right;
+    margin: 0;
+    display: flex;
+    list-style: none;
+}
+
+.navbar__list--item {
+    line-height: 4rem;
+    width: auto;
+    margin: 0;
+    margin-left: 2.5rem;
+    text-decoration: none;
+    color: var(--darkGrayishBlue);
+    font-size: 1.3rem;
+}
+
+.navbar__list--item:hover {
+    color: var(--softRed);
+}
+
+@media (max-width: 375px) {
+    
+}
+
+.navbar__menu {
+    float: right;
+    line-height: 4rem;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+  }
