@@ -31,7 +31,7 @@ body {
     font-family: var(--mainFont);
     background-color: var(--offWhite);
     width: 100%;
-    max-width: 120rem;
+    max-width: 115rem;
     height: auto;
     padding: 0 2rem;
 }
@@ -48,6 +48,7 @@ body {
 .navbar {
     width: 100%;
     height: 4rem;
+    margin-bottom: 4rem;
 }
 
 .navbar__menu--close {
@@ -101,6 +102,10 @@ body {
 }
 
 @media (max-width: 760px) {
+    .navbar {
+        margin-bottom: 2rem;
+    }
+
     .navbar__menu {
         height: 4rem;
         display: flex;
@@ -128,22 +133,25 @@ body {
         transition: all .5s;
         flex-direction: column;
         top: 0;
-        padding: 2rem;
-        padding-top: 2.5rem;
+        padding: 2.5rem;
     }
 
     .navbar__list li {
         display: block;
         text-align: left;
+        margin: .5rem 0;
 
     }
 
     .navbar__list--item {
+        color: var(--veryDarkBlue);
+        font-size: 1.8rem;
         margin: 0;
     }
 
     .navbar__menu--close {
         display: block;
+        margin-bottom: 8rem;
     }
 
     .navbar__menu--close img {
@@ -156,5 +164,83 @@ body {
 
     #check:checked ~ .screen__opacity {
         display: block;
+    }
+}
+
+/** Grid container **/
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+                        "main main new" 
+                        "main main new"
+                        "cards cards cards";
+    gap: 2rem;
+}
+
+@media (max-width: 760px) {
+    .grid-container {
+        grid-template-areas: "main" "new" "cards";
+    }
+}
+
+/** Main  **/
+
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas: 
+                        "main-image main-image" 
+                        "main-title main-info";
+}
+
+@media (max-width: 760px) {
+    .main {
+        grid-template-areas: "main-image" "main-title" "main-info";
+    }
+}
+
+.main__image {
+    grid-area: main-image;
+    background-image: url("../assets/images/image-web-3-desktop.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+}
+
+@media (max-width: 760px) {
+    .main__image {
+        background-image: url("../assets/images/image-web-3-mobile.jpg");
+    }
+}
+
+.main__title {
+    grid-area: main-title;
+}
+
+.main__info {
+    grid-area: main-info;
+}
+
+
+/** New (aside) **/
+
+.new {
+    grid-area: new;
+}
+
+
+
+/** Cards **/
+
+.cards__container {
+    grid-area: cards;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 760px) {
+    .cards__container {
+        grid-template-columns: 1fr;
     }
 }
