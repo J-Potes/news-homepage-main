@@ -171,6 +171,7 @@ body {
 
 .grid-container {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
                         "main main new" 
                         "main main new"
@@ -180,6 +181,7 @@ body {
 
 @media (max-width: 760px) {
     .grid-container {
+        grid-template-columns: 1fr;
         grid-template-areas: "main" "new" "cards";
     }
 }
@@ -189,6 +191,7 @@ body {
 .main {
     grid-area: main;
     display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: 
                         "main-image main-image" 
                         "main-title main-info";
@@ -196,6 +199,7 @@ body {
 
 @media (max-width: 760px) {
     .main {
+        grid-template-columns: 1fr;
         grid-template-areas: "main-image" "main-title" "main-info";
     }
 }
@@ -216,6 +220,32 @@ body {
 
 .main__title {
     grid-area: main-title;
+    margin: 0;
+    margin-top: 3rem;
+    /* margin-right: 3rem; */
+    
+    /* width: 25rem; */
+    
+}
+
+.main__title h1 {
+    margin: 0;
+    font-size: 5.5rem;
+    font-weight: 800;
+    max-width: 80%;
+    line-height: 5.5rem;
+}
+
+@media (max-width: 760px) {
+    .main__title {
+        margin-bottom: 1rem;
+    }
+
+    .main__title h1 {
+        font-size: 4rem;
+        max-width: 100%;
+        line-height: 4rem;
+    }
 }
 
 .main__info {
