@@ -178,7 +178,7 @@ body {
                         "main main new" 
                         "main main new"
                         "cards cards cards";
-    gap: 2rem;
+    gap: 3rem;
 }
 
 @media (max-width: 760px) {
@@ -293,8 +293,30 @@ body {
 
 .new {
     grid-area: new;
+    background-color: var(--veryDarkBlue);
+    padding: 2rem;
 }
 
+.new__title {
+    color: var(--softOrange);
+}
+
+.new__info {
+    
+}
+
+.new__info--title {
+    color: var(--offWhite);
+}
+
+.new__info--text {
+    color: var(--grayishBlue);
+}
+
+.new__separation {
+    /* height: 0.1rem; */
+    border-bottom: 0.1rem solid var(--grayishBlue); 
+}
 
 
 /** Cards **/
