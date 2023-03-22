@@ -31,7 +31,7 @@ body {
     font-family: var(--mainFont);
     background-color: var(--offWhite);
     width: 100%;
-    max-width: 115rem;
+    max-width: 110rem;
     height: auto;
     padding: 0 2rem;
 }
@@ -68,10 +68,10 @@ body {
     line-height: 4rem;
     width: auto;
     margin: 0;
-    margin-left: 2.5rem;
+    margin-left: 4rem;
     text-decoration: none;
     color: var(--darkGrayishBlue);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 .navbar__list--item:hover {
@@ -294,28 +294,42 @@ body {
 .new {
     grid-area: new;
     background-color: var(--veryDarkBlue);
-    padding: 2rem;
+    padding: 3rem 2.5rem;
 }
 
 .new__title {
     color: var(--softOrange);
-}
-
-.new__info {
-    
+    font-size: 4rem;
+    margin: 0;
+    margin-bottom: 3rem;
 }
 
 .new__info--title {
     color: var(--offWhite);
+    font-size: 2rem;
+    margin: 0;
+}
+
+.new__info--title:hover {
+    cursor: pointer;
+    color: var(--softOrange);
 }
 
 .new__info--text {
     color: var(--grayishBlue);
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+@media (max-width: 760px) {
+    .new__info--text {
+        font-size: 1.4rem;
+    }
 }
 
 .new__separation {
-    /* height: 0.1rem; */
     border-bottom: 0.1rem solid var(--grayishBlue); 
+    margin: 3rem 0;
 }
 
 
@@ -325,10 +339,20 @@ body {
     grid-area: cards;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    /* height: 20rem; */
 }
 
 @media (max-width: 760px) {
     .cards__container {
         grid-template-columns: 1fr;
     }
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.card__image {
+    height: 12rem;
 }
