@@ -197,12 +197,15 @@ body {
     grid-template-areas: 
                         "main-image main-image" 
                         "main-title main-info";
+    column-gap: 3rem;
+    row-gap: 2rem;
 }
 
 @media (max-width: 760px) {
     .main {
         grid-template-columns: 1fr;
         grid-template-areas: "main-image" "main-title" "main-info";
+
     }
 }
 
@@ -223,14 +226,14 @@ body {
 .main__title {
     grid-area: main-title;
     margin: 0;
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
 }
 
 .main__title h1 {
     margin: 0;
-    font-size: 5.5rem;
+    font-size: 5.4rem;
     font-weight: 800;
-    max-width: 80%;
+    max-width: 90%;
     line-height: 5.5rem;
 }
 
@@ -240,7 +243,7 @@ body {
     }
 
     .main__title h1 {
-        font-size: 4rem;
+        font-size: 4.5rem;
         max-width: 100%;
         line-height: 4rem;
     }
@@ -248,8 +251,8 @@ body {
 
 .main__info {
     grid-area: main-info;
-    margin-top: 3rem;
-    padding-right: 3rem;
+    /* margin-top: 3rem; */
+    padding-right: 1rem;
 }
 
 @media (max-width: 760px) {
@@ -264,7 +267,7 @@ body {
     font-size: 1.5rem;
     line-height: 2.5rem;
     margin-top: 0;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
 @media (max-width: 760px) {
@@ -294,7 +297,7 @@ body {
 .new {
     grid-area: new;
     background-color: var(--veryDarkBlue);
-    padding: 3rem 2.5rem;
+    padding: 2.8rem 2.5rem;
 }
 
 .new__title {
@@ -317,7 +320,8 @@ body {
 
 .new__info--text {
     color: var(--grayishBlue);
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
     margin-bottom: 0;
 }
 
@@ -339,6 +343,7 @@ body {
     grid-area: cards;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
     /* height: 20rem; */
 }
 
@@ -356,3 +361,28 @@ body {
 .card__image {
     height: 12rem;
 }
+
+.card__number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--grayishBlue);
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.card__title {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: var(--veryDarkBlue);
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.card__text {
+    font-size: 1.4rem;
+    color: var(--darkGrayishBlue);
+    margin: 0;
+    padding-right: 8%;
+    line-height: 2.5rem;
+}
+
