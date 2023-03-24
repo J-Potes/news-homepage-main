@@ -386,3 +386,29 @@ body {
     line-height: 2.5rem;
 }
 
+/** Attribution **/
+
+.attribution {
+    margin-top: 3rem;
+    
+}
+
+@media (max-width: 760px) {
+    .attribution {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
+
+
+.attribution__text {
+    font-size: 1.2rem;
+}
+
+.attribution__text a {
+    color: var(--softRed);
+}
+
+.attribution__text a:hover {
+    color: var(--softOrange);
+}
