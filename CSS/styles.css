@@ -27,6 +27,14 @@ html, body {
     margin: 0;
 }
 
+@media (max-height: 830px) {
+    @media (min-width: 1000px) {
+        html {
+            height: fit-content;
+        }
+    }   
+}
+
 body {
     font-family: var(--mainFont);
     background-color: var(--offWhite);
@@ -36,7 +44,7 @@ body {
     padding: 0 2rem;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1000px) {
     html {
         padding: 1.5rem 0;
         align-items: unset;
@@ -102,7 +110,7 @@ body {
     display: none;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1000px) {
     .navbar {
         margin-top: 0;
         margin-bottom: 2rem;
@@ -181,7 +189,7 @@ body {
     gap: 3rem;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1000px) {
     .grid-container {
         grid-template-columns: 1fr;
         grid-template-areas: "main" "new" "cards";
@@ -201,7 +209,7 @@ body {
     row-gap: 2rem;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1000px) {
     .main {
         grid-template-columns: 1fr;
         grid-template-areas: "main-image" "main-title" "main-info";
@@ -217,7 +225,7 @@ body {
     height: 30rem;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1000px) {
     .main__image {
         background-image: url("../assets/images/image-web-3-mobile.jpg");
     }
@@ -237,7 +245,7 @@ body {
     line-height: 5.5rem;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1000px) {
     .main__title {
         margin-bottom: 1rem;
     }
@@ -255,7 +263,7 @@ body {
     padding-right: 1rem;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1000px) {
     .main__info {
         margin-top: 1rem;
         padding-right: 0;
@@ -270,7 +278,7 @@ body {
     margin-bottom: 4rem;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1000px) {
     .main__info--text {
         margin-bottom: 2.5rem;
     }
@@ -325,7 +333,7 @@ body {
     margin-bottom: 0;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1000px) {
     .new__info--text {
         font-size: 1.4rem;
     }
@@ -347,7 +355,7 @@ body {
     /* height: 20rem; */
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1000px) {
     .cards__container {
         grid-template-columns: 1fr;
     }
@@ -378,6 +386,11 @@ body {
     margin-bottom: 1rem;
 }
 
+.card__title:hover {
+    cursor: pointer;
+    color: var(--softRed);
+}
+
 .card__text {
     font-size: 1.4rem;
     color: var(--darkGrayishBlue);
@@ -393,7 +406,7 @@ body {
     
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1000px) {
     .attribution {
         text-align: center;
         margin-bottom: 2rem;
